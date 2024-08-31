@@ -1,6 +1,43 @@
-.App {
-  text-align: center;
+*{
+  padding: 0px;
+  margin: 0px;
 }
+.navbar {
+  text-align: center;
+  /* padding: 0px 5%; */
+}
+
+.navbarBox {
+  padding: 0px 13%;
+}
+
+.navbarContent {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  /* margin: 0px 42.375px; */
+  /* background-color: #61dafb; */
+}
+
+.navbarLogo {
+  margin-left: 3%;
+  border: 3px solid;
+}
+
+.navbarList {
+  list-style: none;
+  display: flex;
+  margin-right: 50%;
+}
+
+.navbarList li {
+  margin: 0% 20%;
+  /* padding: 0% 20%; */
+}
+
 
 .App-logo {
   height: 40vmin;
