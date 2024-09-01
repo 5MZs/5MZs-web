@@ -11,16 +11,16 @@ function Nav() {
                         logo
                     </div>
                     <ul className='navbarList'>
-                        <Link to={'/Benefit'}>
+                        <Link to={'/Benefit'} style={{ textDecoration: "none", color:"black", paddingLeft:'30%' }}>
                         <li className='navbarItem'>카드 혜택</li>
                         </Link>
-                        <Link to={'/Map'}>
+                        <Link to={'/Map'} style={{ textDecoration: "none", color:"black", paddingLeft:'30%' }}>
                         <li className='navbarItem'>혜택 로드맵</li>
                         </Link>
-                        <Link to={'/AccountBook'}>
+                        <Link to={'/AccountBook'} style={{ textDecoration: "none", color:"black", paddingLeft:'30%' }}>
                         <li className='navbarItem'>가계부</li>
                         </Link>
-                        <Link to={'/login'}>
+                        <Link to={'/login'} style={{ textDecoration: "none", color:"black", paddingLeft:'30%' }}>
                             <li className='navbarItem'>로그인 / 회원가입</li>
                         </Link>
                     </ul>

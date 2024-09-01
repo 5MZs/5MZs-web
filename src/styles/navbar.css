@@ -30,21 +30,22 @@
 .navbarList {
     list-style: none;
     /* display: block; */
-    margin: 0%;
-    padding: 0%;
-    padding-left: 20%;
+    margin: 0;
+    padding: 0 0 0 20%;
     /* justify-content: space-between;  */
-
 
 }
 
-
 .navbarList li {
     display: inline-block;
-    padding: 50px 50px;
-    white-space : nowrap; 
+    padding: 0px, 50px;
+    white-space: nowrap;
     /* padding: 0% 40%; */
     /* border: 3px solid; */
     /* text-align: center; */
     /* padding: 0% 20%; */
+    border-radius: 8px;
+}
+.navbarItem:hover{
+    background-color: rgba(0, 0,0, 0.1);
 }
