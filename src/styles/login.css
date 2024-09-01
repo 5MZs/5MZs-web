@@ -1,0 +1,80 @@
+
+.loginBox{
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0,0.1);
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 640px;
+  height: 600px;
+  display: flex;  
+  flex-direction: column;
+  /* align-content: flex-start; */
+}
+.loginMessage{
+  font-size: large;
+  margin-top: 15%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.loginForm{
+  margin-top: 20%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.id-input{
+  width: 300px;
+  height: 50px;
+  font-size: large;
+  background-color: rgba(0, 0, 0,0);
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.pwd-input{
+  width: 300px;
+  height: 50px;
+  font-size: large;
+  background-color: rgba(0, 0, 0,0);
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.login-input-box{
+  background-color: aqua;
+  border-radius: 16px;
+  width: 300px;
+  height: 50px;
+  font-size: large;
+  margin-top: 30px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+}
+.login-input{
+  width: 300px;
+  height: 50px;
+  font-size: large;
+  background-color: rgba(0, 0, 0,0);
+  /* border-bottom: 1px solid black; */
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.join-input{
+  width: 300px;
+  height: 50px;
+  font-size: large;
+  /* background-color: rgba(0, 0, 0,0); */
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
