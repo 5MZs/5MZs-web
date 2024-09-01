@@ -1,0 +1,101 @@
+/* 메인페이지 상단 카드 슬라이드 */
+.mainCard {
+    width: 55%;
+    height: 20%;
+    background-color: rgb(110, 167, 236);
+    border-radius: 16px;
+    margin: 5% auto;
+}
+
+.mainCard_content1 {
+    /* margin: 3%; */
+    padding: 3%;
+}
+
+.mainCard_content1 div{
+    margin: 3%;
+}
+
+.mainCard_content1 span {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.mainCard_content1 p {
+    margin: 1%;
+    font-size: 20px;
+}
+
+.mainCard_content1 .image {
+    margin: 3% auto;
+    ;
+}   
+
+.mainCard_content1 .image img {
+    width: 20%;
+
+}
+
+
+/* 메인페이지 금융 단어 */
+.wordCard {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+.wordCard h4 {
+    font-size: 20px;
+}
+
+.wordCardContainer {
+    display: flex;
+    margin: 3% auto;
+    /* align-items: center; */
+}
+
+.wordCardBox {
+    background-color: rgba(225, 220, 220, 0.852);
+    width: 250px;
+    height: 395px;
+    border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.wordCardBox div {
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    /* align-content: center; */
+}
+
+.wordCardBox .quiz {
+    background-color: rgb(235, 235, 184);
+    font-weight: bolder;
+    width: 200px;
+    height: 100px;
+}
+
+.wordCardBox .quiz:hover {
+    background: rgb(131, 219, 114);
+}
+
+.wordCardBox .quiz span {
+    overflow-wrap: break-word;
+    white-space: nowrap;
+    /* font-size: calc(1vw + 1vh); */
+    font-size: 30px;
+}
+
+.wordCardBox .description {
+    flex-wrap: wrap;
+    /* border: 1px solid; */
+    word-break: keep-all;
+}
+
