@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from './component/Navbar';
 import './App.css';
+import Login from './component/Login';
+import Home from './component/Home';
 
 function App() {
   return (
-    <nav className="navbar">
-      <div className='navbarBox'>
-      <div className='navbarContent'>
-      <div className='navbarLogo'>
-        logo
-      </div>
-      <ul className='navbarList'>
-        <li className='navbarItem'>Map</li>
-        <li className='navbarItem'>Wallet</li>
-        <li className='navbarItem'>Card</li>
-        <li className='navbarItem'>Benefit</li>
-        <li className='navbarItem'>MyPage</li>
-      </ul>
+    <BrowserRouter>
+    <div className="App">
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </div>
-    </div>
-    </nav>
+    </BrowserRouter>
   );
 }
 
