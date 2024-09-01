@@ -1,0 +1,52 @@
+/*     카드 서브메뉴   */
+.CardNav {
+    width: 20%;
+    display: flex;
+    margin: 20px;
+    flex: column;
+    align-items: center;
+    margin: 20px;
+    border: 1px solid #CCC;
+}
+
+.CardNav ul {
+  margin: auto;
+  list-style: none;
+}
+.carouselContainer{
+  display: flex;
+}
+/* BC 카드 */
+.carouselBox {
+  margin-top: 40px;
+  width: 80%;
+  height: 300px;
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #CCC;
+}
+.carouselBox div{
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-flex;
+}
+.carouselImage{
+  margin: 0px 1%;
+  height: 250px;
+  margin-top: 25px;
+  object-fit: contain;
+}
+.carouselMainImage{
+  height: 300px;
+  object-fit: contain;
+}
+
+@keyframes leftSlide {
+  0% {
+    left:100px;
+  }
+  100% {
+    left:300px;
+  }
+}

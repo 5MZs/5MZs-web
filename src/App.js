@@ -4,6 +4,8 @@ import Nav from './component/Navbar';
 import './App.css';
 import Login from './component/Login';
 import Home from './component/Home';
+import Benefit from './component/Benefit';
+import BC from './component/CardNav/BC';
 
 function App() {
   return (
@@ -12,11 +14,24 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/benefit" element={<Benefit />} />
+        <Route path="/login" element={<Login />} />]
+        
+        <Route path="/benefit/shinhan" element={<div>shinhan</div>} />
+          <Route path="/benefit/samsung" element={<div>삼성카드</div>} />
+          <Route path="/benefit/KB" element={<div>KB</div>} />
+          <Route path="/benefit/hyundai" element={<div>hyundai</div>} />
+          <Route path="/benefit/lotte" element={<div>lotte</div>} />
+          <Route path="/benefit/woori" element={<div>woori</div>} />
+          <Route path="/benefit/NH" element={<div>NH</div>} />
+          <Route path="/benefit/hana" element={<div>hana</div>} />
+          <Route path="/benefit/BC" element={<BC/>} />
+          <Route path="/benefit/IBK" element={<div>IBK</div>} />
       </Routes>
     </div>
     </BrowserRouter>
   );
 }
+
 
 export default App;
