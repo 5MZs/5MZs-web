@@ -4,6 +4,7 @@ import Nav from './component/Navbar';
 import './App.css';
 import Login from './component/Login';
 import Home from './component/Home';
+import Map from './component/Map'
 import Benefit from './component/Benefit';
 import BC from './component/CardNav/BC';
 
@@ -14,6 +15,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/map" element={<Map />} />
         <Route path="/benefit" element={<Benefit />} />
         <Route path="/login" element={<Login />} />]
         
