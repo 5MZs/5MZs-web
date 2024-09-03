@@ -1,75 +1,97 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import BenefitCategory from '../BenefitCategory';
 import '../../styles/benefit.css';
-// import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
 
-/* BC 캐러셀 컴포넌트 */
+// BC카드에 대한 이미지 배열 예시
 const BcImages = [
-  {
-    id: 0,
-    url: "https://d1c5n4ri2guedi.cloudfront.net/card/2458/card_img/31078/2458card_1.png",
-  },
-  {
-    id: 1,
-    url: "https://d1c5n4ri2guedi.cloudfront.net/card/2644/card_img/32094/2644card.png",
-  },
-  {
-    id: 2,
-    url: "https://d1c5n4ri2guedi.cloudfront.net/card/2346/card_img/32523/2346card.png",
-  },
-  {
-    id: 3,
-    url: "https://d1c5n4ri2guedi.cloudfront.net/card/2418/card_img/28128/2418card.png",
-  },
-  {
-    id: 4,
-    url: "https://d1c5n4ri2guedi.cloudfront.net/card/2557/card_img/33458/2557card.png",
-  }
+  { url: 'image1.jpg' },
+  { url: 'image2.jpg' },
+  { url: 'image3.jpg' }
 ];
 
-function BC() {
+const MyComponent = () => {
+  const [history, setHistory] = useState([]);
+
+  // fetchDepartment 함수를 호출합니다.
+  const fetchDepartment = async () => {
+    try {
+      // 외부 API URL로 fetch 요청
+      const response = await fetch('http://15.165.135.177:3000/api/v1/cardbenefitsinfo/새마을금고');
+      
+      // 응답 상태가 200(성공)이 아닐 경우 오류 처리
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      
+      // JSON으로 응답 데이터 변환
+      const json = await response.json();
+      
+      // 변환된 데이터로 상태를 업데이트
+      setHistory(json.history);
+    } catch (error) {
+      // 오류 처리
+      console.error('Failed to fetch data:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchDepartment();
+  }, []);
+
+  // 캐러셀
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToLeft = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + BcImages.length) % BcImages.length);
+  };
+
+  const goToRight = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % BcImages.length);
+  };
+
   return (
-      <div className='carouselContainer'> 
-        <div className='carouselBox'>
-          <div id='btnL' onClick={btnLeft}>
-            왼
-          </div>
-          <div >
-            <img className='carouselImage' src='https://d1c5n4ri2guedi.cloudfront.net/card/2458/card_img/31078/2458card_1.png' alt=''></img>
-            <img className='carouselImage' src='https://d1c5n4ri2guedi.cloudfront.net/card/2644/card_img/32094/2644card.png' alt=''></img>
-            <img className='carouselImage carouselMainImage' src='https://d1c5n4ri2guedi.cloudfront.net/card/2346/card_img/32523/2346card.png' alt=''></img>
-            <img className='carouselImage' src='https://d1c5n4ri2guedi.cloudfront.net/card/2418/card_img/28128/2418card.png' alt=''></img>
-            <img className='carouselImage' src='https://d1c5n4ri2guedi.cloudfront.net/card/2557/card_img/33458/2557card.png' alt=''></img>
-          </div>
-          <div id='btnR'>
-            오  
-          </div>
+    <>
+      <div>
+        <div className='benefitCategory'>
+          <BenefitCategory />
         </div>
       </div>
-  )
-}
+      <div className="box">
+        <div className='imageContainer'>
+          <button className='btn' onClick={goToLeft}>왼</button>
+          <div className='imageBox'>
+            <div
+              className='imageWrapper'
+              style={{
+                transform: `translateX(-${currentIndex * 100}%)`
+              }}
+            >
+              {BcImages.map((image, index) => (
+                <div className="cardImage" key={index}>
+                  <img
+                    className=''
+                    style={{
+                      objectFit: "contain",
+                      height: "90%"
+                    }}
+                    src={image.url}
+                    alt={`Card ${index}`}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <button className='btn' onClick={goToRight}>오</button>
+        </div>
+      </div>
+      <div>
+        {/* 데이터를 렌더링하는 부분 */}
+        {history.map(item => (
+          <div key={item.id}>{item.name}</div>
+        ))}
+      </div>
+    </>
+  );
+};
 
-let now = 2;
-function btnLeft(){
-  // 클래스를 뺀다. 그리고 왼쪽에 있는 카드를 클래스 넣는다
-  // 맨 왼쪽 카드는 빠지고 기존 카드 왼쪽으로 1칸 이동. 오른쪽카드 차례차례 왼쪽으로 한칸씩 이동.
-
-    // 이미지 슬라이드 넣기.
-  let 너 = document.getElementsByClassName('carouselImage')[now];
-  너.classList.toggle('carouselMainImage');
-  now=now+1
-
-  /* 
-   // 오른쪽 전환 효과 추가.
-  너.style.transition = 'transform 0.5s ease-in-out';
-  너.style.transform = 'translateX(-173.5px)';
-  let 다음 = document.getElementsByClassName('carouselImage')[now];
-  다음.classList.toggle('carouselMainImage')
-  // 새로운 이미지 불러오고 기존 이미지 삭제 */
-
-} 
-
-
-
-
-
-export default BC
+export default MyComponent;

@@ -2,6 +2,20 @@
   padding: 0px;
   margin: 0px;
 }
+
+body {
+  background-color: #FEF5E3;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+  position: relative;
+}
+
 .navbar {
   text-align: center;
   /* padding: 0px 5%; */

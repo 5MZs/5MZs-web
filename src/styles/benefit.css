@@ -1,52 +1,150 @@
-/*     카드 서브메뉴   */
-.CardNav {
-    width: 20%;
+/* 카드 혜택 페이지 */
+.benefitAll {
+  /* display: flex; */
+  background-color: skyblue;
+  height: 500px;
+  margin-top: 5%;
+  }
+  
+  .cardNav {
+    background-color: white;
+    border-radius: 0 16px 16px 0;
+    position: fixed;
+    margin: auto;
+    width: 255px;
+    height: 70%;
     display: flex;
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center;     /* 세로 방향 중앙 정렬 */
+  }
+  
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* 가로 방향 중앙 정렬 */
+    justify-content: center; /* 세로 방향 중앙 정렬 */
+    width: 100%;              /* .cardNav의 전체 너비를 차지 */
+    height: 100%;             /* .cardNav의 전체 높이를 차지 */
+  }
+  
+  .cardSee {
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 20px;     /* 제목과 리스트 사이에 여백 추가 */
+  }
+  
+  .cardNavList {
+    list-style: none;        /* 기본 목록 스타일 제거 */
+    padding: 0;              /* 기본 패딩 제거 */
+    margin: 0;               /* 기본 마진 제거 */
+    display: flex;
+    flex-direction: column;  /* 리스트 항목을 세로로 정렬 */
+    align-items: center;     /* 리스트 항목을 가로 방향으로 중앙 정렬 */
+  }
+  
+  .cardNavList li {
+    margin: 10px 0;          /* 리스트 항목 사이에 여백 추가 */
+  }
+  
+  .cardNavList a {
+    text-decoration: none;   /* 링크 밑줄 제거 */
+    color: black;            /* 링크 색상 설정 */
+  }
+
+
+/*   
+  .cardBox {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 80%;
+}
+ */
+
+/*     카드 서브메뉴   */
+/* .cardNav {
+    width: 20%;
+    display: flex; 
     margin: 20px;
     flex: column;
     align-items: center;
     margin: 20px;
-    border: 1px solid #CCC;
+    border: 1px solid black;
 }
 
-.CardNav ul {
+.cardNavList {
   margin: auto;
   list-style: none;
 }
-.carouselContainer{
-  display: flex;
-}
-/* BC 카드 */
-.carouselBox {
-  margin-top: 40px;
-  width: 80%;
-  height: 300px;
-  display: inline-flex;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #CCC;
-}
-.carouselBox div{
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-flex;
-}
-.carouselImage{
-  margin: 0px 1%;
-  height: 250px;
-  margin-top: 25px;
-  object-fit: contain;
-}
-.carouselMainImage{
-  height: 300px;
-  object-fit: contain;
+
+.cardSee {
+  width: 50px;
+  height: 100px;
 }
 
-@keyframes leftSlide {
-  0% {
-    left:100px;
-  }
-  100% {
-    left:300px;
-  }
+
+.cardBox {
+  margin-left: auto;
 }
+*/
+
+/* 캐러셀 */
+/* 캐러셀 전체 컨테이너 이미지 */
+.benefitCategory {
+  margin-bottom: 20px; /* 캐러셀과의 간격을 설정 */
+}
+
+.box {
+  display: flex;
+  margin-top: 100px;
+  margin-left: 255px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 개별 이미지 박스 */
+.imageBox {
+  width: 30%;
+  overflow: hidden;
+  position: relative;
+/*   margin: 20px 0; */
+}
+
+/*이미지 포함하고 있는 래퍼*/
+.imageWrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; 
+}
+
+/*개별 이미지 스타일링 */
+.cardImage {
+  width: 300px;
+  min-width: 100%; 
+  height: 250px; 
+  text-align: center; 
+}
+
+/* 캐러셀 버튼 */
+.btn {
+  background-color: #ddd;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.btn:hover {
+  background-color: #ccc;
+}
+.btn:focus {
+  outline: none;
+}
+
+
