@@ -1,0 +1,25 @@
+.mapNavbar{
+  position: absolute;
+  z-index: 3;
+}
+.mapItem{
+  float: left;
+  background-color: yellow;
+  border-radius: 10px;
+  margin: 8px;
+  padding: 3px;
+  font-size: large;
+}
+
+.mapItem:hover{
+  background-color: green;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+html{
+  height: 100%;
+}
