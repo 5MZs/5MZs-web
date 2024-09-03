@@ -1,26 +1,42 @@
 import '../styles/login.css';
+import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
+import { useState } from 'react';
+
 
 function Login() {
+
+    const [loginValue, setLoginValues] = useState(
+        { inputId: '', inputPwd: '' }
+    );
+
+
     return (
         <div className='loginBox'>
             <div className='loginMessage'>
-                감성을 건드리는 로그인 요청멘트
+                로그인
             </div>
             <div className='loginForm'>
                 <div>
                     <form className='loginInput' action='#' method='POST'>
-                        <input className="id-input" type="text" placeholder="이메일을 입력하세요" value=''/><br/>
+                        <input 
+                            className="inputId" 
+                            type="text" 
+                            placeholder="아이디를 입력하세요" 
+                            value={ loginValue.inputId }/><br/>
                         <input
-                            className="pwd-input"
+                            className="inputPwd"
                             type="password"
                             placeholder="비밀번호를 입력하세요"
-                            value=''/><br/>
-                            <div className='login-input-box'>
-                                <input type='submit' value='로그인' className='login-input'/><br></br>
-                            </div>
-                            <div className='login-input-box'>
-                        <input type='submit' value='회원가입' className='login-input'/>
-                            </div>
+                            value={ loginValue.inputPwd }/><br/>
+
+                        <div className='loginBtn'>
+                            <button type='submit'>로그인</button>
+                            {/* <input type='submit' value='로그인' className='login-input'/><br></br> */}
+                        </div>
+                        <div className='loginBtn'>
+                            <button type='submit'><Link to="/join">회원가입</Link></button>
+                            {/* <input type='submit' value='회원가입' className='login-input'/> */}
+                        </div>
                     </form>
                 </div>
             </div>
