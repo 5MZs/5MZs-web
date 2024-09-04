@@ -54,29 +54,26 @@ function Home() {
 
     return (
         <div>
-
             <div className="mainCard">
                 <div className="mainCard_content1">
-                    <span>카드 혜택을 지도에 표시해줘요 !</span>
+                    <span>금융 용어 </span>
                     <div>
                         <p>사용 중인 카드로 받을 수 있는 혜택을 확인하고</p>
                         <p>지도에 위치까지 확인해요</p>
                     </div>
                     <div className="image">
-                        <img src='../img/메인_슬라이드_카드.png'></img>
+                        <img src='../img/card.png'></img>
+                        <img src='../img/map.png'></img>
                     </div>
                 </div>
             </div>
-            
-            {/* <div style={ {flex: 'none', height: '10px'} }></div> */}
 
 
-
-            <div className="wordCard">
+                <div className="wordCard">
                 <h4>금융 용어 찍먹하기</h4>
                 <div className="wordCardContainer">
                 <div className={`wordCardBox ${flipped ? 'flipped' : ''}`} onClick={handleCardClick}>
-                        <div>
+                        <div className ="wordCardInner">
                             <div className="wordCardFront" onClick={handleCardClick}>
                                 { quiz1[0] }
                             </div>
@@ -89,7 +86,58 @@ function Home() {
 
                 </div>
             </div>
+            
+            <div className="mainCard">
+                <div className="mainCard_content1">
+                    <span>카드 혜택을 뿌셔보자 !</span>
+                    <div>
+                        <p>#알뜰 #실속 #카드 혜택</p>
+                        <p>나에게 필요한 카드 혜택은? <br/>
+                            카드 혜택 모음 확인해보세요😁
+                        </p>
+                    </div>
+                    <div className="image">
+                        <img src='../img/card.png'></img>
+                        <img src='../img/map.png'></img>
+                    </div>
+                </div>
+            </div>
+            
+            {/* <div style={ {flex: 'none', height: '10px'} }></div> */}
 
+
+            <div className="mainCard">
+                <div className="mainCard_content1">
+                    <span>카드 혜택 톺아보기 !</span>
+                    <div>
+                        <p>혜택 로드맵을 통해</p>
+                        <p>사용 중인 카드로 받을 수 있는 혜택을 <br/>
+                            지도에 ~ 위치까지~ 확인 가능! 👌</p>
+                    </div>
+                    <div className="image">
+                        <img src='../img/card.png'></img>
+                        <img src='../img/map.png'></img>
+                    </div>
+                </div>
+            </div>
+
+            <div className="mainCard">
+                <div className="mainCard_content1">
+                    <span>플렉스 해버렸지 뭐야 !</span>
+                    <div>
+                        <p>머니머니해도 돈쓰는게 최고</p><br/>
+                        <p>효율적인 소비습관을 위해 금융생활권 확인할 수 있는
+                            플렉스 맵 이용해보세요😎 </p>
+                    </div>
+                    <div className="image">
+                        <img src='../img/card.png'></img>
+                        <img src='../img/map.png'></img>
+                    </div>
+                </div>
+            </div>
+
+        
+            
         </div>
     );
 }
