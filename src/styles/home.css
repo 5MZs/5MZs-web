@@ -5,11 +5,14 @@
     background-color: rgb(110, 167, 236);
     border-radius: 16px;
     margin: 5% auto;
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .mainCard_content1 {
     /* margin: 3%; */
-    padding: 3%;
+        padding: 3%;
 }
 
 .mainCard_content1 div{
@@ -39,9 +42,8 @@
 
 /* 메인페이지 금융 단어 */
 .wordCard {
-    margin-left: auto;
-    margin-right: auto;
-    width: 900px;
+    background-color: grey;
+    position: relative;
 }
 
 .wordCard h4 {
@@ -49,9 +51,83 @@
 }
 
 .wordCardContainer {
-    display: flex;
-    margin: 3% auto;
-    /* align-items: center; */
+    position: relative;
+    background-color: green;
+}
+
+/* 카드 컨테이너에 3D 효과를 위한 perspective 적용 */
+.wordCardBox {
+    position: relateive;
+    width: 250px;
+    height: 400px;
+/*     left: 762px;
+    top: 373px; */
+    background: #D1EDFF;
+    border-radius: 20px;
+    perspective: 1000px;
+}
+
+/* 카드의 앞면과 뒷면을 포함하는 컨테이너 */
+.wordCardInner {
+    position: absolute;
+    width: 80%; /* 내부 컨테이너의 크기 조정 */
+    height: 30%; /* 내부 컨테이너의 크기 조정 */
+    top: 10%; /* 내부 컨테이너를 수직으로 중앙에 배치 */
+    left: 10%; /* 내부 컨테이너를 수평으로 중앙에 배치 */
+    transform-style: preserve-3d; /* 자식 요소를 3D 공간에 위치시키기 */
+    transition: transform 0.6s; /* 부드러운 뒤집기 애니메이션 */
+}
+
+/* 카드의 앞면과 뒷면 스타일 */
+.wordCardFront,
+.wordCardBack {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+/*     border-radius: 20px; */
+    backface-visibility: hidden; /* 카드 뒤집을 때 뒷면 숨기기 */
+/*     transform-style: preserve-3d;
+    transition: transform 0.6s; */
+    /* left: 799px;
+    top: 405px;
+    background: #D9D9D9; */
+}
+
+/* 카드 앞면 스타일 */
+.wordCardFront {
+/*     backface-visibility: hidden; */
+    background: #D9D9D9;
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+/* 카드 뒷면 스타일 */
+.wordCardBack {
+/*     backface-visibility: hidden; */
+    background: yellow;
+    transform: rotateY(180deg);
+}
+
+/* 카드 뒤집기 효과 */
+.wordCardBox.flipped .wordCardInner {
+    transform: rotateY(180deg); /* 카드 내부 컨테이너를 180도 회전시켜서 카드 뒤집기 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* .wordCardContainer { */
+    /* display: flex; */
+    /* margin: 3% auto; */
+    /* align-items: center;
 }
 
 .wordCardBox {
@@ -72,30 +148,30 @@
     width: 200px;
     height: 200px;
     margin: 20px auto;
-    /* align-content: center; */
 }
 
-.wordCardBox .quiz {
+.wordCardBox .cardFront {
     background-color: rgb(235, 235, 184);
     font-weight: bolder;
     width: 200px;
     height: 100px;
-}
 
-.wordCardBox .quiz:hover {
+}
+ */
+
+
+
+
+
+/* .wordCardBox .quiz:hover {
     background: rgb(131, 219, 114);
-}
+} */
 
-.wordCardBox .quiz span {
+/* 글자 단어 안잘리게 
+/* .wordCardBox .quiz span {
     overflow-wrap: break-word;
     white-space: nowrap;
-    /* font-size: calc(1vw + 1vh); */
+    font-size: calc(1vw + 1vh);
     font-size: 30px;
-}
-
-.wordCardBox .description {
-    flex-wrap: wrap;
-    /* border: 1px solid; */
-    word-break: keep-all;
-}
+} */
 
