@@ -118,7 +118,7 @@ function Map() {
     }, []); // useEffect-End
 
     return (
-        <div>
+        <div className='mainBoard'>
             <div>
                 <div className='mapNavbar'>
                     {
@@ -127,13 +127,12 @@ function Map() {
                         )
                     }
                 </div>
-
             </div>
             <div
                 id="map"
                 style={{
                     width: '100%',
-                    height: '500px'
+                    height: '100%'
                 }}/>
 
         </div>
