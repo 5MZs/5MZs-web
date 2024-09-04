@@ -1,5 +1,6 @@
 import {useEffect, useRef, useState} from 'react';
 import '../styles/map.css';
+import Category from './Category';
 
 function Map() {
     const latitude = useRef(null);
