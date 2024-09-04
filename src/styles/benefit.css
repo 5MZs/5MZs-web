@@ -104,6 +104,7 @@
   gap: 20px;
 }
 .imageContainer {
+  width: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,7 +112,7 @@
 
 /* 개별 이미지 박스 */
 .imageBox {
-  width: 30%;
+  width: 100%;
   overflow: hidden;
   position: relative;
 /*   margin: 20px 0; */
@@ -126,15 +127,36 @@
 
 /*개별 이미지 스타일링 */
 .cardImage {
-  width: 300px;
-  min-width: 100%; 
-  height: 250px; 
-  text-align: center; 
+  margin-top: -200px;
+  width: 200px; /* 너비를 설정합니다 */
+  min-width: 100%; /* 최소 너비를 100%로 설정 */
+  height: 800px; /* 높이를 자동으로 설정 */
+  text-align: center; /* 텍스트를 중앙 정렬 */
+  position: relative; /* 자식 요소를 상대적으로 배치할 수 있도록 설정 */
+  overflow-x: hidden; /* 이미지가 컨테이너를 넘지 않도록 설정 */
+  /* overflow: auto; */
 }
+
+.cardImage::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.cardImage img {
+  margin-bottom: -170px; /* 이미지 하단에 음수 여백을 설정하여 간격을 줄임 */
+  width: 200px;
+}
+
+.cardDetails {
+  margin-top: -20px; /* 이미지와 텍스트 사이의 간격을 줄이기 위해 마진을 음수로 설정 */
+  padding: 10px; /* 필요에 따라 패딩을 조절 */
+}
+
+
 
 /* 캐러셀 버튼 */
 .btn {
-  background-color: #ddd;
+  background-color: #C2EAFB;
+  border-radius: 10px;
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -147,4 +169,8 @@
   outline: none;
 }
 
+/* .cardDetails {
+  color: black;
+  border: solid 1px black;
+} */
 

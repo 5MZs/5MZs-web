@@ -3,8 +3,8 @@ import BenefitCategory from '../BenefitCategory';
 import '../../styles/benefit.css';
 import { useNavigate } from 'react-router-dom';
 
-const Woori = () => {  // 컴포넌트 이름을 대문자로 시작하도록 변경
-  const [wooriValue, setWooriValues] = useState([]); // 변수 이름을 일관되게 유지
+const Saemaeulgeumgo = () => {  // 컴포넌트 이름을 대문자로 시작하도록 변경
+  const [saemaeulgeumgoValue, setSaemaeulgeumgoValues] = useState([]); // 변수 이름을 일관되게 유지
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ const Woori = () => {  // 컴포넌트 이름을 대문자로 시작하도록 �
     try {
       setLoading(true);
       const response = await fetch(
-        'http://15.165.135.177:3000/api/v1/cardbenefitsinfo/WOORI'
+        'http://15.165.135.177:3000/api/v1/cardbenefitsinfo/SAEMAEULGEUMGO'
       );
       
       if (!response.ok) {
@@ -24,7 +24,7 @@ const Woori = () => {  // 컴포넌트 이름을 대문자로 시작하도록 �
       const json = await response.json();
       
       console.log('Fetched data:', json); // 데이터 구조 확인
-      setWooriValues(json || []); // `json`이 실제 데이터 배열인지 확인
+      setSaemaeulgeumgoValues(json || []); // `json`이 실제 데이터 배열인지 확인
     } catch (error) {
       setError(error.message);
       console.error('Failed to fetch data:', error);
@@ -45,19 +45,19 @@ const Woori = () => {  // 컴포넌트 이름을 대문자로 시작하도록 �
   }, []);
 
   useEffect(() => {
-    console.log('WooriValue:', wooriValue); // 데이터가 제대로 업데이트되었는지 확인
-  }, [wooriValue]);
+    console.log('SaemaeulgeumgoValue:', saemaeulgeumgoValue); // 데이터가 제대로 업데이트되었는지 확인
+  }, [saemaeulgeumgoValue]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToLeft = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + wooriValue.length) % wooriValue.length
+      (prevIndex) => (prevIndex - 1 + saemaeulgeumgoValue.length) % saemaeulgeumgoValue.length
     );
   };
 
   const goToRight = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % wooriValue.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % saemaeulgeumgoValue.length);
   };
 
   if (loading) 
@@ -83,7 +83,7 @@ const Woori = () => {  // 컴포넌트 이름을 대문자로 시작하도록 �
                 transition: 'transform 0.5s ease-in-out'
               }}>
               {
-                wooriValue.map((item, index) => (
+                saemaeulgeumgoValue.map((item, index) => (
                   <div className="cardImage" key={index}>
                     <img
                       className=''
@@ -124,4 +124,4 @@ const Woori = () => {  // 컴포넌트 이름을 대문자로 시작하도록 �
   );
 };
 
-export default Woori;
+export default Saemaeulgeumgo;
