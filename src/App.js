@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from './component/Navbar';
 import './App.css';
 import Login from './component/Login';
+import Join from './component/Join';
 import Home from './component/Home';
 import Map from './component/Map'
 import Benefit from './component/Benefit';
@@ -20,6 +21,8 @@ function App() {
         <Route path="/map" element={<Map />} />
         <Route path="/benefit" element={<Benefit />} />
         <Route path="/login" element={<Login />} />]
+        <Route path="/join" element={<Join />} />]
+    
         
         <Route path="/benefit/shinhan" element={<div>shinhan</div>} />
           <Route path="/benefit/samsung" element={<div>삼성카드</div>} />

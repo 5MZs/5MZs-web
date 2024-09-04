@@ -33,7 +33,7 @@ function Map() {
         // console.log(process.env.REACT_APP_NAVER_MAP_CLIENT_SECRET);
 
         function success(s) {
-            console.log(s)
+          console.log(s);
         }
         function error(s) {
           console.log(s);
@@ -51,12 +51,12 @@ function Map() {
                     // 지도의 초기 중심 좌표
                     center: new naver
                         .maps
-                        .LatLng(37.5527535, 126.964843),
+                        .LatLng(37.5666103, 126.9783882),
                     logoControl: false, // 네이버 로고 표시 X
                     mapDataControl: false, // 지도 데이터 저작권 컨트롤 표시 X
                     scaleControl: true, // 지도 축척 컨트롤의 표시 여부
                     tileDuration: 200, // 지도 타일을 전환할 때 페이드 인 효과의 지속 시간(밀리초)
-                    zoom: 15, // 지도의 초기 줌 레벨
+                    zoom: 14, // 지도의 초기 줌 레벨
                     zoomControl: true, // 줌 컨트롤 표시
                     zoomControlOptions: {
                         position: naver.maps.Position.RIGHT_BOTTOM // 줌 컨트롤 우하단에 배치
@@ -77,7 +77,8 @@ function Map() {
             initMap();
         } else {
             const script = document.createElement('script');
-            script.src = 'https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=' +'dbvbdq603l'; // 자신의 Naver Client ID로 변경하세요.
+            script.src = 'https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=' +
+                    `${process.env.REACT_APP_NAVER_MAP_CLIENT_ID}`; // 자신의 Naver Client ID로 변경하세요.
             script.onload = initMap;
             document
                 .head

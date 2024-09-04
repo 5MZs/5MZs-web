@@ -11,13 +11,13 @@ function Nav() {
                         logo
                     </div>
                     <ul className='navbarList'>
-                        <Link to={'/Benefit'} style={{ textDecoration: "none", color:"black", paddingLeft:'30%' }}>
+                        <Link to={'/benefit'} style={{ textDecoration: "none", color:"black", paddingLeft:'30%' }}>
                         <li className='navbarItem'>카드 혜택</li>
                         </Link>
-                        <Link to={'/Map'} style={{ textDecoration: "none", color:"black", paddingLeft:'30%' }}>
+                        <Link to={'/map'} style={{ textDecoration: "none", color:"black", paddingLeft:'30%' }}>
                         <li className='navbarItem'>혜택 로드맵</li>
                         </Link>
-                        <Link to={'/AccountBook'} style={{ textDecoration: "none", color:"black", paddingLeft:'30%' }}>
+                        <Link to={'/accountBook'} style={{ textDecoration: "none", color:"black", paddingLeft:'30%' }}>
                         <li className='navbarItem'>가계부</li>
                         </Link>
                         <Link to={'/login'} style={{ textDecoration: "none", color:"black", paddingLeft:'30%' }}>
