@@ -7,8 +7,14 @@ import Join from './component/Join';
 import Home from './component/Home';
 import Map from './component/Map'
 import Benefit from './component/Benefit';
-import BC from './component/CardNav/BC';
-
+import SHINHAN from './component/CardNav/SHINHAN'
+import SAMSUNG from './component/CardNav/SAMSUNG'
+import KB from './component/CardNav/KB'
+import SAEMAEULGEUMGO from './component/CardNav/SAEMAEULGEUMGO'
+import WOORI from './component/CardNav/WOORI'
+import NH from './component/CardNav/NH'
+import TOSS from './component/CardNav/TOSS'
+import IBK from './component/CardNav/IBK'
 
 function App() {
   return (
@@ -20,20 +26,18 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/map" element={<Map />} />
         <Route path="/benefit" element={<Benefit />} />
-        <Route path="/login" element={<Login />} />]
-        <Route path="/join" element={<Join />} />]
+        <Route path="/login" element={<Login />} />
+        <Route path="/join" element={<Join />} />
     
         
-        <Route path="/benefit/shinhan" element={<div>shinhan</div>} />
-          <Route path="/benefit/samsung" element={<div>삼성카드</div>} />
-          <Route path="/benefit/KB" element={<div>KB</div>} />
-          <Route path="/benefit/hyundai" element={<div>hyundai</div>} />
-          <Route path="/benefit/lotte" element={<div>lotte</div>} />
-          <Route path="/benefit/woori" element={<div>woori</div>} />
-          <Route path="/benefit/NH" element={<div>NH</div>} />
-          <Route path="/benefit/hana" element={<div>hana</div>} />
-          <Route path="/benefit/BC" element={<BC/>} />
-          <Route path="/benefit/IBK" element={<div>IBK</div>} />
+        <Route path="/benefit/SHINHAN" element={<SHINHAN/>} />
+          <Route path="/benefit/SAMSUNG" element={<SAMSUNG/>} />  
+          <Route path="/benefit/KB" element={<KB/>} />
+          <Route path="/benefit/SAEMAEULGEUMGO" element={<SAEMAEULGEUMGO/>} />
+          <Route path="/benefit/WOORI" element={<WOORI/>} />
+          <Route path="/benefit/NH" element={<NH/>} />
+          <Route path="/benefit/TOSS" element={<TOSS/>} />
+          <Route path="/benefit/IBK" element={<IBK/>} />
       </Routes>
     </div>
     </BrowserRouter>

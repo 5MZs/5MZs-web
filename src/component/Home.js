@@ -55,7 +55,7 @@ function Home() {
     return (
         <div>
             <div className="mainCard">
-                <div className="mainCard_content1">
+                <div className="mainCardContent1">
                     <span>금융 용어 </span>
                     <div>
                         <p>사용 중인 카드로 받을 수 있는 혜택을 확인하고</p>
@@ -88,7 +88,7 @@ function Home() {
             </div>
             
             <div className="mainCard">
-                <div className="mainCard_content1">
+                <div className="mainCardContent1">
                     <span>카드 혜택을 뿌셔보자 !</span>
                     <div>
                         <p>#알뜰 #실속 #카드 혜택</p>
@@ -107,7 +107,7 @@ function Home() {
 
 
             <div className="mainCard">
-                <div className="mainCard_content1">
+                <div className="mainCardContent1">
                     <span>카드 혜택 톺아보기 !</span>
                     <div>
                         <p>혜택 로드맵을 통해</p>
@@ -122,7 +122,7 @@ function Home() {
             </div>
 
             <div className="mainCard">
-                <div className="mainCard_content1">
+                <div className="mainCardContent1">
                     <span>플렉스 해버렸지 뭐야 !</span>
                     <div>
                         <p>머니머니해도 돈쓰는게 최고</p><br/>
