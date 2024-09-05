@@ -8,7 +8,7 @@ import Home from './component/Home';
 import Map from './component/Map'
 import Benefit from './component/Benefit';
 import BC from './component/CardNav/BC';
-import AccountBook from './component/AccountBook';
+
 
 function App() {
   return (
@@ -20,9 +20,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/map" element={<Map />} />
         <Route path="/benefit" element={<Benefit />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/join" element={<Join />} />
-        <Route path="/accountbook" element={<AccountBook />} />
+        <Route path="/login" element={<Login />} />]
+        <Route path="/join" element={<Join />} />]
     
         
         <Route path="/benefit/shinhan" element={<div>shinhan</div>} />
