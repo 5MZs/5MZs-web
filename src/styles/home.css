@@ -1,8 +1,11 @@
 /* 메인페이지 상단 카드 슬라이드 */
-.mainCard {
+.mainCard1,
+.mainCard2,
+.mainCard3,
+.mainCard4 {
+    display: felx;
     width: 60%;
     height: 350px;
-    background-color: rgb(110, 167, 236);
     border-radius: 16px;
     margin: 5% auto;
     font-family: "Jua", sans-serif;
@@ -10,15 +13,33 @@
     font-style: normal;
 }
 
-.mainCardContent1 {
-    width: 400px;
-    height: 200px;
-    /* margin: 3%; */
-        padding: 3%;
+.mainCard1 {
+    background-color: #FFBFBF;
 }
 
-.mainCardContent1 div{
-    margin: 3%;
+.mainCard2 {
+    background-color: #FBFFC1;
+}
+
+.mainCard3 {
+    background-color: #DCFFC7;
+}
+
+.mainCard4 {
+    background-color: #ECCDFF;
+}
+
+
+.mainCardContent1 {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+    white-space: nowarp;
+}
+
+.mainCardContent1 div {
+    margin: 50px;
 }
 
 .mainCardContent1 span {
@@ -32,47 +53,66 @@
     font-size: 20px;
 }
 
+/* 
 .mainCardContent1, .image {
     margin: 3% auto;
-    ;
-}   
+}
 
 .mainCardContent1, .image img {
     width: 20%;
-
 }
+ */
 
 
 /* 메인페이지 금융 단어 */
 .wordCard {
-    background-color: grey;
+    width: 100%;
+/*     background-color: grey; */
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     position: relative;
 }
 
 .wordCard h4 {
     font-size: 20px;
 }
+/* 기존 CSS 규칙 */
+
+/* 새로 추가하거나 수정할 규칙 */
 
 .wordCardContainer {
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
     background-color: green;
 }
 
-/* 카드 컨테이너에 3D 효과를 위한 perspective 적용 */
 .wordCardBox {
-    position: relateive;
-    width: 250px;
+    position: relative;
+    width: 100%;
     height: 400px;
-/*     left: 762px;
-    top: 373px; */
     background: #D1EDFF;
     border-radius: 20px;
     perspective: 1000px;
 }
 
+/* 카드의 내용이 중앙에 오도록 조정 */
+.wordContent {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
 /* 카드의 앞면과 뒷면을 포함하는 컨테이너 */
 .wordCardInner {
     position: absolute;
+    display: flex;
     width: 80%; /* 내부 컨테이너의 크기 조정 */
     height: 30%; /* 내부 컨테이너의 크기 조정 */
     top: 10%; /* 내부 컨테이너를 수직으로 중앙에 배치 */
@@ -85,20 +125,15 @@
 .wordCardFront,
 .wordCardBack {
     position: absolute;
-    width: 100%; 
+    text-align: center;
+    font-size: 3em;
+    width: 100%;
     height: 100%;
-/*     border-radius: 20px; */
     backface-visibility: hidden; /* 카드 뒤집을 때 뒷면 숨기기 */
-/*     transform-style: preserve-3d;
-    transition: transform 0.6s; */
-    /* left: 799px;
-    top: 405px;
-    background: #D9D9D9; */
 }
 
 /* 카드 앞면 스타일 */
 .wordCardFront {
-/*     backface-visibility: hidden; */
     background: #D9D9D9;
     z-index: 2;
     transform: rotateY(0deg);
@@ -106,75 +141,35 @@
 
 /* 카드 뒷면 스타일 */
 .wordCardBack {
-/*     backface-visibility: hidden; */
     background: yellow;
+    color: #D20DA4;
     transform: rotateY(180deg);
 }
 
 /* 카드 뒤집기 효과 */
-.wordCardBox, .flipped, .wordCardInner {
+.wordCardBox.flipped .wordCardInner {
     transform: rotateY(180deg); /* 카드 내부 컨테이너를 180도 회전시켜서 카드 뒤집기 */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* .wordCardContainer { */
-    /* display: flex; */
-    /* margin: 3% auto; */
-    /* align-items: center;
+.scroll-container {
+    height: 100vh;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 
-.wordCardBox {
-    background-color: rgba(225, 220, 220, 0.852);
-    width: 250px;
-    height: 395px;
-    border-radius: 16px;
-    margin-left: auto;
-    margin-right: auto;
+.section {
+    height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
+    background-color: #f0f0f0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-.wordCardBox div {
-    align-content: center;
-    justify-items: center;
-    text-align: center;
-    width: 200px;
-    height: 200px;
-    margin: 20px auto;
+.section:nth-child(odd) {
+    background-color: #e0e0e0;
 }
 
-.wordCardBox .cardFront {
-    background-color: rgb(235, 235, 184);
-    font-weight: bolder;
-    width: 200px;
-    height: 100px;
-
+.section:nth-child(even) {
+    background-color: #c0c0c0;
 }
- */
-
-
-
-
-
-/* .wordCardBox .quiz:hover {
-    background: rgb(131, 219, 114);
-} */
-
-/* 글자 단어 안잘리게 
-/* .wordCardBox .quiz span {
-    overflow-wrap: break-word;
-    white-space: nowrap;
-    font-size: calc(1vw + 1vh);
-    font-size: 30px;
-} */
-

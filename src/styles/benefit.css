@@ -1,57 +1,130 @@
 /* 카드 혜택 페이지 */
+* {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-style: normal;
+}
+
 .benefitAll {
-  /* display: flex; */
   background-color: skyblue;
   height: 500px;
   margin-top: 5%;
-  }
-  
-  .cardNav {
-    background-color: white;
-    border-radius: 0 16px 16px 0;
-    position: fixed;
-    margin: auto;
-    width: 255px;
-    height: 70%;
-    display: flex;
-    justify-content: center; /* 가로 방향 중앙 정렬 */
-    align-items: center;     /* 세로 방향 중앙 정렬 */
-  }
-  
-  .cardContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;     /* 가로 방향 중앙 정렬 */
-    justify-content: center; /* 세로 방향 중앙 정렬 */
-    width: 100%;              /* .cardNav의 전체 너비를 차지 */
-    height: 100%;             /* .cardNav의 전체 높이를 차지 */
-  }
-  
-  .cardSee {
-    white-space: nowrap;
-    text-align: center;
-    margin-bottom: 20px;     /* 제목과 리스트 사이에 여백 추가 */
-  }
-  
-  .cardNavList {
-    list-style: none;        /* 기본 목록 스타일 제거 */
-    padding: 0;              /* 기본 패딩 제거 */
-    margin: 0;               /* 기본 마진 제거 */
-    display: flex;
-    flex-direction: column;  /* 리스트 항목을 세로로 정렬 */
-    align-items: center;     /* 리스트 항목을 가로 방향으로 중앙 정렬 */
-  }
-  
-  .cardNavList li {
-    margin: 10px 0;          /* 리스트 항목 사이에 여백 추가 */
-  }
-  
-  .cardNavList a {
-    text-decoration: none;   /* 링크 밑줄 제거 */
-    color: black;            /* 링크 색상 설정 */
-  }
+  position: relative; /* relative로 위치 조정 가능 */
+}
 
+.cardNav {
+  background-color: white;
+  border-radius: 0 16px 16px 0;
+  position: fixed;
+  margin: auto;
+  width: 255px;
+  height: 70%;
+  display: flex;
+  justify-content: center; /* 가로 방향 중앙 정렬 */
+  align-items: center;     /* 세로 방향 중앙 정렬 */
+}
 
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* 가로 방향 중앙 정렬 */
+  justify-content: center; /* 세로 방향 중앙 정렬 */
+  width: 100%;              /* .cardNav의 전체 너비를 차지 */
+  height: 100%;             /* .cardNav의 전체 높이를 차지 */
+}
+
+.cardSee {
+  background-color: #C2EAFB;
+  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+  font-family: "Stylish", serif;
+  font-weight: bold;
+  font-size: 3vh;
+  font-style: normal;
+  display: flex;              /* Flex 컨테이너로 설정 */
+  justify-content: center;   /* 가로 방향 중앙 정렬 */
+  align-items: center;       /* 세로 방향 중앙 정렬 */
+  text-align: center; 
+}
+
+.cardNavList {
+  list-style: none;        /* 기본 목록 스타일 제거 */
+  padding: 0;              /* 기본 패딩 제거 */
+  margin: 0;               /* 기본 마진 제거 */
+  display: flex;
+  flex-direction: column;  /* 리스트 항목을 세로로 정렬 */
+  align-items: center;     /* 리스트 항목을 가로 방향으로 중앙 정렬 */
+}
+
+.cardNavList li {
+  margin: 10px 0;
+  text-decoration: none;
+  font-family: "Stylish", serif;
+  font-size: 3vh;
+  font-style: normal;
+  color: #007BFF; /* 링크 색상 설정 (블루) */
+  transition: 0.35s;
+}
+
+.cardNavList a {
+  text-decoration: none;
+  color: #007BFF; /* 링크 색상 설정 (블루) */
+  transition: 0.35s;
+}
+
+.cardNavList li:hover {
+  color: #0056b3; /* 링크 호버 시 색상 변경 */
+  text-shadow: 0 0 15px #FFFFFF;
+  transform: scale(1.05);
+}
+
+/* 카드 정보 박스 */
+.cardInfoBox {
+  position: relative; /* 이 부모 요소의 위치를 기준으로 자식 요소를 배치 */
+  margin-left: 270px; /* cardNav의 너비를 고려한 여백 */
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cardInfoName {
+  padding: 50px;
+  text-align: center;
+}
+
+.cardInfoWord h1, .cardInfoWord h2 {
+  margin: 0;
+}
+
+.cardInfoWord h1 {
+  font-size: 2em; /* 적절한 크기로 조절 */
+}
+
+.cardInfoWord h2 {
+  font-size: 1.5em; /* 적절한 크기로 조절 */
+}
+
+.cardInfoBox ul {
+  list-style: none; /* 기본 목록 스타일 제거 */
+  padding: 0;
+  margin: 0;
+  display: flex; /* 가로로 나열 */
+  flex-wrap: nowrap; /* 한 줄에 나열되도록 설정 */
+  gap: 10px; /* 이미지 간의 간격 */
+  justify-content: center; /* 가로 방향 중앙 정렬 */
+}
+
+.cardInfoBox li {
+/*   flex-direction: row; */
+  margin: 0;
+}
+
+.cardInfoBox img {
+  max-width: 150px; /* 이미지 최대 너비 설정 */
+  height: auto; /* 높이 자동 조절 */
+  display: block; /* 이미지를 블록 요소로 만들어 마진 간격 조정 */
+}
 /*   
   .cardBox {
     margin-left: auto;
