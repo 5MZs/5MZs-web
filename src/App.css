@@ -36,11 +36,6 @@ html, body, #root {
   /* background-color: #61dafb; */
 }
 
-.navbarLogo {
-  margin-left: 3%;
-  border: 3px solid;
-}
-
 .navbarList {
   list-style: none;
   display: flex;

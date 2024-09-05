@@ -38,12 +38,12 @@ function Map() {
     console.log(userInfo);
     const tag = Object.keys(userInfo);
 
-    function success(s) {
-        console.log(s);
-    }
-    function error(s) {
-        console.log(s);
-    }
+        function success(s) {
+          console.log(s);
+        }
+        function error(s) {
+          console.log(s);
+        }
     navigator
         .geolocation
         .getCurrentPosition(success, error)
@@ -119,7 +119,7 @@ function Map() {
 
     return (
         <div className='mainBoard'>
-            <div>
+        <div>
                 <div className='mapNavbar'>
                     {
                         tag.map(
@@ -134,7 +134,7 @@ function Map() {
                     width: '100%',
                     height: '100%'
                 }}/>
-
+          
         </div>
     );
 }

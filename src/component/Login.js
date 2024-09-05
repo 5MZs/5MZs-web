@@ -115,6 +115,7 @@ function Login() {
                             value={loginValue.password}
                             onChange={handleChange}/><br/>
 
+                        <div className='loginBtnBox'>
                         <div className='loginBtn'>
                             <button type='submit'>로그인</button>
                             {/* <input type='submit' value='로그인' className='login-input'/><br></br> */}
@@ -128,6 +129,7 @@ function Login() {
                                     }}>회원가입</Link>
                             </button>
                             {/* <input type='submit' value='회원가입' className='login-input'/> */}
+                        </div>
                         </div>
                     </form>
                 </div>

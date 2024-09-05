@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import {React, useEffect} from 'react';
 import '../styles/navbar.css';
+import logoImage from '../mapping.png';
 
 function Nav() {
     useEffect(() => {
@@ -15,7 +16,7 @@ function Nav() {
             <div className='navbarBox'>
                 <div className='navbarContent'>
                     <div className='navbarLogo'>
-                        logo
+                    <img src={logoImage} alt="Logo" />
                     </div>
                     <ul className='navbarList'>
                         <Link to={'/benefit'} style={{ textDecoration: "none", color:"black", paddingLeft:'30%' }}>

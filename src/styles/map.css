@@ -14,15 +14,24 @@ html{
 }
 .mapItem{
   background-color: white;
-  border: 1px green solid;
+  border: 1px #C2EAFB solid;
   border-radius: 10px;
   margin: 8px;
   padding: 3px;
-  font-size: large;   
+  font-size: large; 
+  width: 150px;
+  height: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-family: "Gowun Batang", serif;
+  font-style: normal;
 }
 
 .mapItem:hover{
-  background-color: green;
+  background-color:#C2EAFB;
 }
 
 .mapCategory {
