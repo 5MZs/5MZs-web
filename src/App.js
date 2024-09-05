@@ -7,11 +7,11 @@ import Join from './component/Join';
 import Home from './component/Home';
 import Map from './component/Map'
 import Benefit from './component/Benefit';
-import SHINHAN from './component/CardNav/SHINHAN'
-import SAMSUNG from './component/CardNav/SAMSUNG'
+import SHINHAN from './component/CardNav/Shinhan'
+import SAMSUNG from './component/CardNav/Samsung'
 import KB from './component/CardNav/KB'
 import SAEMAEULGEUMGO from './component/CardNav/SAEMAEULGEUMGO'
-import WOORI from './component/CardNav/WOORI'
+import WOORI from './component/CardNav/Woori'
 import NH from './component/CardNav/NH'
 import TOSS from './component/CardNav/TOSS'
 import IBK from './component/CardNav/IBK'
