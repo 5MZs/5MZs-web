@@ -37,12 +37,12 @@ function Map() {
     console.log(userInfo);
     const tag = Object.keys(userInfo);
 
-    function success(s) {
-        console.log(s);
-    }
-    function error(s) {
-        console.log(s);
-    }
+        function success(s) {
+          console.log(s);
+        }
+        function error(s) {
+          console.log(s);
+        }
     navigator
         .geolocation
         .getCurrentPosition(success, error)
@@ -117,11 +117,16 @@ function Map() {
     }, []); // useEffect-End
 
     return (
+<<<<<<< HEAD
+        <div className='mainBoard'>
+        <div>
+=======
         <div className='mainBoard' style={{
             width: '100%',
             height: `${window.innerHeight-61}px`
         }}>
             <div>
+>>>>>>> 67b4517bac04c6c89057a401d3d8c02f548ecabe
                 <div className='mapNavbar'>
                     {
                         tag.map(
@@ -136,7 +141,7 @@ function Map() {
                     width: '100%',
                     height: '100%'
                 }}/>
-
+          
         </div>
     );
 }
