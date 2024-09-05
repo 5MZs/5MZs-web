@@ -95,7 +95,7 @@ const KB = () => {  // 컴포넌트 이름을 대문자로 시작하도록 변�
                       src={item.image_url}
                       alt={`Card ${index}`}/>
                     <div className="cardDetails">
-                      <h3>{item.card_name}</h3>
+                      <h3>{item.card_name}</h3><br/>
                       <div>
                         {/* 콘솔 로그로 데이터 확인 */}
                         {console.log('Benefit Data:', item.benefit)}

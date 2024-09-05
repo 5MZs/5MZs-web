@@ -1,6 +1,9 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "IBM Plex Sans KR", sans-serif;
+/*     font-weight: ; */
+    font-style: normal;
 }
 .navbar {
     text-align: center;
@@ -36,16 +39,20 @@
 
 }
 
-.navbarList li {
+.navbarList a {
     display: inline-block;
     padding: 0px, 50px;
     white-space: nowrap;
+    font-weight: bold;
     /* padding: 0% 40%; */
     /* border: 3px solid; */
     /* text-align: center; */
     /* padding: 0% 20%; */
     border-radius: 8px;
+    /* background-color: #0056b3;  */
+    /* color: #e0e0e0; */
+    border-radius: 16px;
 }
-.navbarItem:hover{
-    background-color: rgba(0, 0,0, 0.1);
+.navbarItem:hover  {
+    color: #9F9FA2;
 }
