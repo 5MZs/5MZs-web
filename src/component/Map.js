@@ -1,7 +1,6 @@
 import {useEffect, useRef, useState} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 import '../styles/map.css';
-// import Category from './Category';
 
 function formating(str) {
     const position = str.length - 7;
@@ -118,7 +117,10 @@ function Map() {
     }, []); // useEffect-End
 
     return (
-        <div className='mainBoard'>
+        <div className='mainBoard' style={{
+            width: '100%',
+            height: `${window.innerHeight-61}px`
+        }}>
             <div>
                 <div className='mapNavbar'>
                     {
