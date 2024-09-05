@@ -16,7 +16,7 @@ import WOORI from './component/CardNav/WOORI'
 import NH from './component/CardNav/NH'
 import TOSS from './component/CardNav/TOSS'
 import IBK from './component/CardNav/IBK'
-
+// import FormForm from "./component/formForm";
 function App() {
   return (
   
@@ -30,6 +30,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/join" element={<Join />} />
         <Route path="/accountbook" element={<AccountBook />} />
+        {/* <Route path="/formform" element={<FormForm />} /> */}
         
         
         <Route path="/benefit/SHINHAN" element={<SHINHAN/>} />
