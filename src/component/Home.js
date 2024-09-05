@@ -47,6 +47,7 @@ function Home() {
                 </div>
             </div>
 
+
             <div className="wordCard">
                 <h4>금융 용어 찍먹하기</h4>
                 <div className="wordCardContainer">
@@ -76,23 +77,33 @@ function Home() {
             <div className="mainCard2">
                 <div className="mainCardContent1">
                     <span>카드 혜택을 뿌셔보자 !</span>
-                    <div>
+                        <div>
                         <p>#알뜰 #실속 #카드 혜택</p>
                         <p>나에게 필요한 카드 혜택은? <br />
                             카드 혜택 모음 확인해보세요😁
                         </p>
                     </div>
+                    <div className="image">
+                        <img src='../img/card.png'></img>
+                        <img src='../img/map.png'></img>
+                    </div>
                 </div>
             </div>
+            
+            {/* <div style={ {flex: 'none', height: '10px'} }></div> */}
 
-            <div className="mainCard3">
+
+            <div className="mainCard">
                 <div className="mainCardContent1">
                     <span>카드 혜택 톺아보기 !</span>
                     <div>
                         <p>혜택 로드맵을 통해</p>
-                        <p>사용 중인 카드로 받을 수 있는 혜택을 <br />
-                            지도에 ~ 위치까지~ 확인 가능! 👌
-                        </p>
+                        <p>사용 중인 카드로 받을 수 있는 혜택을 <br/>
+                            지도에 ~ 위치까지~ 확인 가능! 👌</p>
+                    </div>
+                    <div className="image">
+                        <img src='../img/card.png'></img>
+                        <img src='../img/map.png'></img>
                     </div>
                 </div>
             </div>

@@ -38,10 +38,11 @@ function Login() {
                 throw new Error('네트워크 응답이 실패했습니다.');
             }
             const result = await response.json();
-            console.log('서버 응답:', result);
-
+            // console.log('서버 응답:', result);
+            window.localStorage.setItem('token', `${result.token}`);
+            console.log(result.token);
             // 성공 시 사용자에게 메시지 표시 또는 페이지 리디렉션
-            window.location.href = 'http://localhost:3000/login';  // 원하는 리디렉션 경로로 변경
+            window.location.href = 'http://localhost:3000/';  // 원하는 리디렉션 경로로 변경
         } catch (error) {
             console.error('서버 요청 중 오류 발생:', error);
             // 오류 처리 (예: 사용자에게 오류 메시지 표시)
