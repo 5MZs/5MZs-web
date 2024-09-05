@@ -6,6 +6,7 @@ import Login from './component/Login';
 import Join from './component/Join';
 import Home from './component/Home';
 import Map from './component/Map'
+import AccountBook from './component/AccountBook';
 import Benefit from './component/Benefit';
 import SHINHAN from './component/CardNav/SHINHAN'
 import SAMSUNG from './component/CardNav/SAMSUNG'
@@ -28,7 +29,8 @@ function App() {
         <Route path="/benefit" element={<Benefit />} />
         <Route path="/login" element={<Login />} />
         <Route path="/join" element={<Join />} />
-    
+        <Route path="/accountbook" element={<AccountBook />} />
+        
         
         <Route path="/benefit/SHINHAN" element={<SHINHAN/>} />
           <Route path="/benefit/SAMSUNG" element={<SAMSUNG/>} />  

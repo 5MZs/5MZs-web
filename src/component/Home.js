@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/home.css';
-
 function Home() {
     // 여러 개의 퀴즈 카드 데이터
     const [quizCards] = useState([
@@ -22,15 +21,12 @@ function Home() {
         },
         // 필요한 만큼 더 추가
     ]);
-    
     const [flipped, setFlipped] = useState(Array(quizCards.length).fill(false));
-
     function handleCardClick(index) {
         const newFlipped = [...flipped];
         newFlipped[index] = !newFlipped[index];
         setFlipped(newFlipped);
     }
-
     return (
         <div>
             <div className="mainCard1">
@@ -46,8 +42,6 @@ function Home() {
                     </div>
                 </div>
             </div>
-
-
             <div className="wordCard">
                 <h4>금융 용어 찍먹하기</h4>
                 <div className="wordCardContainer">
@@ -72,42 +66,29 @@ function Home() {
                     ))}
                 </div>
             </div>
-
             {/* 나머지 섹션은 변경하지 않음 */}
             <div className="mainCard2">
                 <div className="mainCardContent1">
                     <span>카드 혜택을 뿌셔보자 !</span>
-                        <div>
+                    <div>
                         <p>#알뜰 #실속 #카드 혜택</p>
                         <p>나에게 필요한 카드 혜택은? <br />
                             카드 혜택 모음 확인해보세요😁
                         </p>
                     </div>
-                    <div className="image">
-                        <img src='../img/card.png'></img>
-                        <img src='../img/map.png'></img>
-                    </div>
                 </div>
             </div>
-            
-            {/* <div style={ {flex: 'none', height: '10px'} }></div> */}
-
-
-            <div className="mainCard">
+            <div className="mainCard3">
                 <div className="mainCardContent1">
                     <span>카드 혜택 톺아보기 !</span>
                     <div>
                         <p>혜택 로드맵을 통해</p>
-                        <p>사용 중인 카드로 받을 수 있는 혜택을 <br/>
-                            지도에 ~ 위치까지~ 확인 가능! 👌</p>
-                    </div>
-                    <div className="image">
-                        <img src='../img/card.png'></img>
-                        <img src='../img/map.png'></img>
+                        <p>사용 중인 카드로 받을 수 있는 혜택을 <br />
+                            지도에 ~ 위치까지~ 확인 가능!👌
+                        </p>
                     </div>
                 </div>
             </div>
-
             <div className="mainCard4">
                 <div className="mainCardContent1">
                     <span>플렉스 해버렸지 뭐야 !</span>
@@ -122,5 +103,4 @@ function Home() {
         </div>
     );
 }
-
 export default Home;
