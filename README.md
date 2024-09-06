@@ -1,5 +1,4 @@
-src/mapping.png
-
+![https://github.com/5MZs/5MZs-web/edit/develop/src/mapping.png)](https://github.com/5MZs/5MZs-web/blob/develop/src/mapping.png)
 - 이승진 :  Front-End 개발 (네이버지도 api 활용 근처 할인지점 찾기기능)
 - 손지원 :  Front-End 개발 (카드 정보, 로그인, 퀴즈 기능)
 - 김현정 : Front-End 개발 (네이버지도 api 활용 가계부기능, 로그인)
