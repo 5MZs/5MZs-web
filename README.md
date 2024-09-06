@@ -1,4 +1,4 @@
-![_________-___________________-001_720.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d95767d-60fb-4e13-9b56-89321d90af54/cef0f8fe-1ae6-49eb-bb4b-e185d8bf8510/_________-___________________-001_720.png)
+src/mapping.png
 
 - 이승진 :  Front-End 개발 (네이버지도 api 활용 근처 할인지점 찾기기능)
 - 손지원 :  Front-End 개발 (카드 정보, 로그인, 퀴즈 기능)
